@@ -18,10 +18,9 @@ So I flipped it around. KEDYY sits in the background, and every so often a cat s
 
 It started as an English thing, but a deck is just a text file, so it works for any language or topic: German nouns, kana, capitals, shell commands, exam terms.
 
-<p align="center">
-  <img src="docs/desktop.webp" width="100%" alt="KEDYY on the desktop">
-  <br><sub>What it looks like on my desktop</sub>
-</p>
+https://github.com/user-attachments/assets/1ac5c14a-a455-47e9-8683-1de2fe31f7fa
+
+<p align="center"><sub>What it looks like while I'm working</sub></p>
 
 ## How it works
 
