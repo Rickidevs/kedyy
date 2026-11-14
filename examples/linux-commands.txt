@@ -1,0 +1,37 @@
+#! name: Linux commands
+#! front: Command
+#! back: What it does
+#! prompt: What does this command do?
+
+ls — list the files in a directory
+cd — change the current directory
+pwd — print the current directory
+cp — copy files
+mv — move or rename files
+rm — remove files
+mkdir — create a directory
+touch — create an empty file or update its timestamp
+cat — print a file's contents
+less — view a file page by page
+grep — search text for a pattern
+find — search for files
+chmod — change file permissions
+chown — change a file's owner
+ps — list running processes
+kill — send a signal to a process (by default it asks the process to stop)
+top — live view of processes and resource use
+df — show free disk space
+du — show how much space files and folders use
+tar — pack or unpack archives
+ssh — log in to a remote machine
+scp — copy files over SSH
+curl — transfer data from or to a URL
+man — show a command's manual
+history — show previously run commands
+which — show where a command's program is
+head — show the first lines of a file
+tail — show the last lines of a file
+sort — sort lines of text
+wc — count lines, words and bytes
+ln -s — create a symbolic link
+sudo — run a command as another user (usually root)

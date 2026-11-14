@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" width="880" height="340" role="img" aria-label="KEDYY: a cat asks a flashcard question and celebrates the right answer">
+  <style>
+    text { font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+    .fur { fill: #f4a259; stroke: #4a2f1d; stroke-width: 2.2; stroke-linejoin: round; }
+    .stripe { stroke: #d9822b; stroke-width: 3; stroke-linecap: round; fill: none; }
+    .line { stroke: #4a2f1d; stroke-width: 3; stroke-linecap: round; fill: none; }
+    .thin { stroke-width: 2.2; }
+    .whisker { stroke: #4a2f1d; stroke-width: 1.3; stroke-linecap: round; opacity: .55; }
+
+    /* 6 s loop: question → cursor clicks option 3 → cat cheers → reset */
+    #cat { animation: bob 6s ease-in-out infinite; transform-origin: 700px 120px; }
+    @keyframes bob {
+      0%, 44%, 100% { transform: translateY(0); }
+      48% { transform: translateY(4px) scale(1.04, .94); }
+      54% { transform: translateY(-22px) rotate(-3deg); }
+      60% { transform: translateY(0); }
+    }
+    #tail-wrap { transform-box: fill-box; transform-origin: 15% 95%; animation: swish 2.6s ease-in-out infinite; }
+    @keyframes swish { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-12deg); } }
+    .eye { transform-box: fill-box; transform-origin: center; animation: blink 3s infinite; }
+    @keyframes blink { 0%, 90%, 100% { transform: scaleY(1); } 94% { transform: scaleY(.1); } }
+
+    .calm { animation: calm 6s infinite; }
+    .joy { animation: joy 6s infinite; }
+    @keyframes calm { 0%, 46% { opacity: 1; } 47%, 92% { opacity: 0; } 93%, 100% { opacity: 1; } }
+    @keyframes joy  { 0%, 46% { opacity: 0; } 47%, 92% { opacity: 1; } 93%, 100% { opacity: 0; } }
+
+    .opt { animation: dim 6s infinite; }
+    @keyframes dim { 0%, 46% { opacity: 1; } 48%, 92% { opacity: .38; } 96%, 100% { opacity: 1; } }
+    #right rect { animation: ok 6s infinite; }
+    @keyframes ok {
+      0%, 46% { fill: #362e28; stroke: #463a31; }
+      48%, 92% { fill: #1f3a2e; stroke: #2fb27a; }
+      96%, 100% { fill: #362e28; stroke: #463a31; }
+    }
+    #right .badge { animation: okb 6s infinite; }
+    @keyframes okb { 0%, 46% { fill: #2a2420; } 48%, 92% { fill: #2fb27a; } 96%, 100% { fill: #2a2420; } }
+
+    #cursor { animation: cursor 6s cubic-bezier(.45, 0, .2, 1) infinite; }
+    @keyframes cursor {
+      0%, 18% { transform: translate(130px, 70px); opacity: 0; }
+      24% { opacity: 1; }
+      42% { transform: translate(0, 0); opacity: 1; }
+      44% { transform: translate(0, 0) scale(.86); }
+      47% { transform: translate(0, 0) scale(1); }
+      62% { opacity: 1; }
+      70%, 100% { transform: translate(0, 0); opacity: 0; }
+    }
+
+    .heart { opacity: 0; animation: rise 6s ease-out infinite; }
+    .heart.b { animation-delay: .15s; }
+    .heart.c { animation-delay: .3s; }
+    @keyframes rise {
+      0%, 48% { opacity: 0; transform: translate(0, 0) scale(.4); }
+      52% { opacity: 1; transform: translate(0, -10px) scale(1); }
+      74% { opacity: 0; transform: translate(0, -70px) scale(.8); }
+      100% { opacity: 0; }
+    }
+  </style>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a221d"/><stop offset="1" stop-color="#14100d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="700" cy="110" r="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f08a3c" stop-opacity=".22"/><stop offset="1" stop-color="#f08a3c" stop-opacity="0"/>
+    </radialGradient>
+    <path id="heartP" d="M12 21s-7.5-4.6-10-9.3C.3 8.3 2.4 4 6.4 4c2.3 0 3.9 1.3 5.6 3.3C13.7 5.3 15.3 4 17.6 4c4 0 6.1 4.3 4.4 7.7C19.5 16.4 12 21 12 21z"/>
+  </defs>
+
+  <rect width="880" height="340" rx="26" fill="url(#bg)"/>
+  <rect width="880" height="340" rx="26" fill="url(#glow)"/>
+
+  <!-- title -->
+  <text x="48" y="118" font-size="64" font-weight="800" fill="#f08a3c" letter-spacing="3">KEDYY</text>
+  <text x="50" y="160" font-size="19" fill="#f6ece2">A desktop cat that pops up</text>
+  <text x="50" y="186" font-size="19" fill="#f6ece2">and quizzes you on your</text>
+  <text x="50" y="212" font-size="19" fill="#f6ece2">own flashcards.</text>
+  <text x="50" y="262" font-size="13.5" fill="#b3a394">Any language · any topic · Linux</text>
+
+  <!-- card -->
+  <g>
+    <rect x="370" y="122" width="460" height="190" rx="18" fill="#2a2420" stroke="#463a31"/>
+    <text x="394" y="152" font-size="12" font-weight="800" fill="#f08a3c" letter-spacing=".5">KEDYY</text>
+    <rect x="444" y="139" width="94" height="19" rx="9.5" fill="#362e28" stroke="#463a31"/>
+    <text x="491" y="152.5" font-size="10.5" font-weight="600" fill="#b3a394" text-anchor="middle">German basics</text>
+    <text x="394" y="180" font-size="11" font-weight="600" fill="#b3a394" letter-spacing="1.2">DEUTSCH → ENGLISH</text>
+    <text x="394" y="210" font-size="23" font-weight="800" fill="#f6ece2">der Schmetterling</text>
+
+    <g class="opt">
+      <rect x="394" y="226" width="205" height="34" rx="10" fill="#362e28" stroke="#463a31"/>
+      <rect x="404" y="234" width="18" height="18" rx="5" fill="#2a2420"/><text x="413" y="247" font-size="11" font-weight="800" fill="#b3a394" text-anchor="middle">1</text>
+      <text x="432" y="248" font-size="13.5" fill="#f6ece2">the bridge</text>
+    </g>
+    <g class="opt">
+      <rect x="609" y="226" width="205" height="34" rx="10" fill="#362e28" stroke="#463a31"/>
+      <rect x="619" y="234" width="18" height="18" rx="5" fill="#2a2420"/><text x="628" y="247" font-size="11" font-weight="800" fill="#b3a394" text-anchor="middle">2</text>
+      <text x="647" y="248" font-size="13.5" fill="#f6ece2">the glove</text>
+    </g>
+    <g id="right">
+      <rect x="394" y="268" width="205" height="34" rx="10" stroke-width="1.5"/>
+      <rect class="badge" x="404" y="276" width="18" height="18" rx="5"/><text x="413" y="289" font-size="11" font-weight="800" fill="#f6ece2" text-anchor="middle">3</text>
+      <text x="432" y="290" font-size="13.5" fill="#f6ece2">the butterfly</text>
+    </g>
+    <g class="opt">
+      <rect x="609" y="268" width="205" height="34" rx="10" fill="#362e28" stroke="#463a31"/>
+      <rect x="619" y="276" width="18" height="18" rx="5" fill="#2a2420"/><text x="628" y="289" font-size="11" font-weight="800" fill="#b3a394" text-anchor="middle">4</text>
+      <text x="647" y="290" font-size="13.5" fill="#f6ece2">the squirrel</text>
+    </g>
+  </g>
+
+  <!-- speech bubble -->
+  <g>
+    <rect x="452" y="46" width="168" height="34" rx="14" fill="#f6ece2"/>
+    <path d="M608 76 L626 86 L614 70 Z" fill="#f6ece2"/>
+    <text class="calm" x="536" y="68" font-size="13.5" font-weight="700" fill="#2e2219" text-anchor="middle">Meow! Quick question</text>
+    <text class="joy" x="536" y="68" font-size="13.5" font-weight="700" fill="#2e2219" text-anchor="middle">Nailed it!</text>
+  </g>
+
+  <!-- hearts -->
+  <g fill="#ff6b8a">
+    <use href="#heartP" class="heart" x="660" y="44"/>
+    <use href="#heartP" class="heart b" x="712" y="30"/>
+    <use href="#heartP" class="heart c" x="756" y="48" fill="#ffb84d"/>
+  </g>
+
+  <!-- cat (same drawing as the app), sitting on the card -->
+  <g id="cat">
+    <g transform="translate(636 14) scale(.86)">
+      <g id="tail-wrap">
+        <path d="M100 108 C 128 104, 134 80, 124 58 C 120 50, 112 52, 116 60 C 122 76, 118 94, 96 98 Z" class="fur"/>
+        <path d="M120 56 C 124 60, 126 66, 126 70" class="stripe"/>
+      </g>
+      <ellipse cx="70" cy="102" rx="38" ry="25" class="fur"/>
+      <ellipse cx="70" cy="106" rx="20" ry="15" fill="#fde6c8"/>
+      <path d="M34 40 L28 4 L60 26 Z" class="fur"/><path d="M37 34 L34 13 L52 27 Z" fill="#f7a8b8"/>
+      <path d="M106 40 L112 4 L80 26 Z" class="fur"/><path d="M103 34 L106 13 L88 27 Z" fill="#f7a8b8"/>
+      <ellipse cx="70" cy="58" rx="43" ry="35" class="fur"/>
+      <path d="M62 27 L64 37 M70 24 L70 36 M78 27 L76 37" class="stripe"/>
+      <ellipse cx="45" cy="71" rx="6.5" ry="3.6" fill="#ff8fa3" opacity=".45"/>
+      <ellipse cx="95" cy="71" rx="6.5" ry="3.6" fill="#ff8fa3" opacity=".45"/>
+      <g class="calm">
+        <g class="eye"><ellipse cx="54" cy="58" rx="6.2" ry="8" fill="#4a2f1d"/><circle cx="56.3" cy="54.6" r="2.4" fill="#fff"/></g>
+        <g class="eye"><ellipse cx="86" cy="58" rx="6.2" ry="8" fill="#4a2f1d"/><circle cx="88.3" cy="54.6" r="2.4" fill="#fff"/></g>
+        <path d="M70 72 Q66 78 61 75 M70 72 Q74 78 79 75" class="line thin"/>
+      </g>
+      <g class="joy">
+        <path d="M47 61 Q54 50 61 61" class="line"/><path d="M79 61 Q86 50 93 61" class="line"/>
+        <path d="M61 74 Q70 90 79 74 Z" fill="#b8424f" stroke="#4a2f1d" stroke-width="2" stroke-linejoin="round"/>
+      </g>
+      <path d="M66 67 L74 67 L70 72 Z" fill="#e87a90" stroke="#4a2f1d" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M38 65 L14 60 M38 70 L13 72 M102 65 L126 60 M102 70 L127 72" class="whisker"/>
+      <path d="M44 88 Q70 98 96 88" stroke="#e5534b" stroke-width="5" stroke-linecap="round" fill="none"/>
+      <circle cx="70" cy="95" r="4.6" fill="#ffd34d" stroke="#4a2f1d" stroke-width="1.5"/>
+      <ellipse cx="54" cy="119" rx="11" ry="7" class="fur"/>
+      <ellipse cx="86" cy="119" rx="11" ry="7" class="fur"/>
+    </g>
+  </g>
+
+  <!-- mouse pointer -->
+  <g id="cursor">
+    <g transform="translate(560 284)">
+      <path d="M0 0 L0 20 L5.5 15 L9.5 24 L13 22.5 L9 14 L16 14 Z" fill="#fff" stroke="#14100d" stroke-width="1.6" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>

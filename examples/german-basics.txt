@@ -1,0 +1,51 @@
+#! name: German basics
+#! front: Deutsch
+#! back: English
+
+# Nouns (with their article)
+der Hund — the dog
+die Katze — the cat
+das Haus — the house
+das Buch — the book
+der Tisch — the table
+der Stuhl — the chair
+die Tür — the door
+das Fenster — the window
+die Stadt — the city (plural: die Städte)
+das Wasser — the water
+das Brot — the bread
+die Milch — the milk
+der Apfel — the apple (plural: die Äpfel)
+die Schule — the school
+der Freund — the friend (male)
+die Freundin — the friend (female); also: girlfriend
+die Arbeit — the work, the job
+der Zug — the train
+das Auto — the car
+die Straße — the street
+der Schmetterling — the butterfly
+das Eichhörnchen — the squirrel
+die Brücke — the bridge
+der Handschuh — the glove
+
+# Verbs
+gehen — to go (on foot)
+kommen — to come
+essen — to eat
+trinken — to drink
+schlafen — to sleep
+sprechen — to speak
+verstehen — to understand
+wissen — to know (a fact)
+kennen — to know (a person or a place)
+lernen — to learn
+arbeiten — to work
+kaufen — to buy
+
+# Phrases
+Guten Morgen — good morning
+Wie geht's? — How are you? (informal)
+Entschuldigung — excuse me; sorry
+Ich verstehe nicht — I don't understand
+Bis später — see you later
+Keine Ahnung — no idea (informal)

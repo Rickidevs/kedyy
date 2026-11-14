@@ -1,0 +1,34 @@
+#! name: Spanish phrases
+#! front: Español
+#! back: English
+
+¿Cómo estás? — How are you? (informal)
+¿Qué tal? — How's it going?
+Mucho gusto — Nice to meet you
+¿Cuánto cuesta? — How much does it cost?
+¿Dónde está el baño? — Where is the bathroom?
+No entiendo — I don't understand
+¿Puedes repetir? — Can you repeat that? (informal)
+Más despacio, por favor — More slowly, please
+Tengo hambre — I'm hungry (literally: I have hunger)
+Tengo sed — I'm thirsty
+Tengo frío — I'm cold
+Me gusta — I like it
+No me gusta — I don't like it
+¡Qué bonito! — How beautiful!
+Lo siento — I'm sorry
+Perdón — Excuse me; sorry
+De nada — You're welcome
+¡Buen provecho! — Enjoy your meal!
+Hasta luego — See you later
+Hasta mañana — See you tomorrow
+¿Qué hora es? — What time is it?
+Estoy cansado — I'm tired (cansada if you're a woman)
+Vale — OK (Spain)
+¡Claro! — Of course!
+A lo mejor — Maybe; perhaps
+Ojalá — I hope so; hopefully
+Tener ganas de — to feel like (doing something)
+Echar de menos — to miss someone (Spain)
+Ponerse las pilas — to get your act together (literally: to put your batteries in)
+Estar en las nubes — to be daydreaming (literally: to be in the clouds)

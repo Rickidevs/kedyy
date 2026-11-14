@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>KEDYY</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stage">
+  <div id="bubble"></div>
+
+  <div id="catwrap"><svg id="cat" viewBox="0 0 140 128" aria-hidden="true">
+    <!-- kuyruk -->
+    <g id="tail">
+      <path d="M100 108 C 128 104, 134 80, 124 58 C 120 50, 112 52, 116 60 C 122 76, 118 94, 96 98 Z" class="fur stroke"/>
+      <path d="M120 56 C 124 60, 126 66, 126 70" class="stripe"/>
+    </g>
+    <!-- gövde -->
+    <ellipse cx="70" cy="102" rx="38" ry="25" class="fur stroke"/>
+    <ellipse cx="70" cy="106" rx="20" ry="15" class="belly"/>
+    <!-- kafa -->
+    <g id="head">
+      <g id="ear-l" class="ear">
+        <path d="M34 40 L28 4 L60 26 Z" class="fur stroke"/>
+        <path d="M37 34 L34 13 L52 27 Z" class="pink"/>
+      </g>
+      <g id="ear-r" class="ear">
+        <path d="M106 40 L112 4 L80 26 Z" class="fur stroke"/>
+        <path d="M103 34 L106 13 L88 27 Z" class="pink"/>
+      </g>
+      <ellipse cx="70" cy="58" rx="43" ry="35" class="fur stroke"/>
+      <path d="M62 27 L64 37 M70 24 L70 36 M78 27 L76 37" class="stripe"/>
+      <ellipse cx="45" cy="71" rx="6.5" ry="3.6" class="blush"/>
+      <ellipse cx="95" cy="71" rx="6.5" ry="3.6" class="blush"/>
+
+      <g id="eyes-open">
+        <g class="eye"><ellipse cx="54" cy="58" rx="6.2" ry="8" class="ink"/><circle cx="56.3" cy="54.6" r="2.4" fill="#fff"/></g>
+        <g class="eye"><ellipse cx="86" cy="58" rx="6.2" ry="8" class="ink"/><circle cx="88.3" cy="54.6" r="2.4" fill="#fff"/></g>
+      </g>
+      <g id="eyes-happy">
+        <path d="M47 61 Q54 50 61 61" class="line"/>
+        <path d="M79 61 Q86 50 93 61" class="line"/>
+      </g>
+      <g id="brows-sad">
+        <path d="M45 46 L60 50" class="line thin"/>
+        <path d="M95 46 L80 50" class="line thin"/>
+      </g>
+      <ellipse id="tear" cx="60" cy="68" rx="2.6" ry="3.6" fill="#7cc6ff"/>
+
+      <path d="M66 67 L74 67 L70 72 Z" class="nose"/>
+      <path id="mouth-neutral" d="M70 72 Q66 78 61 75 M70 72 Q74 78 79 75" class="line thin"/>
+      <path id="mouth-happy" d="M61 74 Q70 90 79 74 Z" class="mouth"/>
+      <path id="mouth-sad" d="M62 81 Q70 74 78 81" class="line thin"/>
+
+      <path d="M38 65 L14 60 M38 70 L13 72 M102 65 L126 60 M102 70 L127 72" class="whisker"/>
+    </g>
+    <!-- tasma + zil -->
+    <path d="M44 88 Q70 98 96 88" class="collar"/>
+    <circle cx="70" cy="95" r="4.6" class="bell"/>
+    <!-- patiler -->
+    <ellipse cx="54" cy="119" rx="11" ry="7" class="fur stroke"/>
+    <ellipse id="paw-rest" cx="86" cy="119" rx="11" ry="7" class="fur stroke"/>
+    <g id="paw-wave">
+      <path d="M96 96 C 102 86, 106 78, 108 70" class="arm"/>
+      <ellipse cx="109" cy="66" rx="10" ry="11" class="fur stroke"/>
+      <path d="M105 59 L105 63 M109 58 L109 62 M113 59 L113 63" class="line thin"/>
+    </g>
+  </svg></div>
+
+  <div id="fx"></div>
+
+  <main id="card">
+    <header>
+      <span class="brand">KEDYY</span>
+      <span id="source" class="chip"></span>
+    </header>
+
+    <p class="prompt" id="prompt"></p>
+    <h1 id="phrase"></h1>
+
+    <div id="options"></div>
+
+    <div id="hint"></div>
+
+    <section id="feedback" hidden>
+      <div id="verdict"></div>
+      <div id="explain"></div>
+    </section>
+
+    <footer>
+      <span id="stats"></span>
+      <button id="btn-later" class="ghost"><span data-t="later"></span> <kbd>Esc</kbd></button>
+      <button id="btn-close" class="primary" hidden></button>
+    </footer>
+  </main>
+</div>
+<script src="i18n.js"></script>
+<script src="sounds.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

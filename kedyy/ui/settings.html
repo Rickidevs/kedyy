@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>KEDYY</title>
+<link rel="stylesheet" href="settings.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <img src="../kedyy.svg" class="logo" alt="">
+    <div class="hero-txt">
+      <h1>KEDYY</h1>
+      <p id="next">…</p>
+    </div>
+    <button id="ask" class="primary big" data-t="ask_now"></button>
+  </header>
+
+  <div class="stats">
+    <div><b id="st-correct">0</b><span data-t="st_correct"></span></div>
+    <div><b id="st-wrong">0</b><span data-t="st_wrong"></span></div>
+    <div><b id="st-learned">0</b><span data-t="st_learned"></span></div>
+    <div><b id="st-total">0</b><span data-t="st_total"></span></div>
+  </div>
+
+  <section class="card">
+    <h2 data-t="sec_timing"></h2>
+    <label class="row">
+      <span class="lbl"><span data-t="enabled"></span><small data-t="enabled_help"></small></span>
+      <input type="checkbox" class="switch" data-k="enabled">
+    </label>
+    <div class="row">
+      <span class="lbl"><span data-t="how_often"></span><small data-t="how_often_help"></small></span>
+      <span class="range">
+        <input type="number" min="1" max="600" data-k="min_gap"> –
+        <input type="number" min="1" max="600" data-k="max_gap"> <span data-t="minutes"></span>
+      </span>
+    </div>
+    <div class="row">
+      <span class="lbl"><span data-t="idle"></span><small data-t="idle_help"></small></span>
+      <span class="range"><input type="number" min="0" max="120" data-k="idle_limit"> <span data-t="minutes"></span></span>
+    </div>
+    <div class="row col">
+      <span class="lbl" data-t="corner"></span>
+      <div class="seg four" data-k="corner">
+        <button data-v="top-left" data-t="corner_tl"></button>
+        <button data-v="top-right" data-t="corner_tr"></button>
+        <button data-v="bottom-left" data-t="corner_bl"></button>
+        <button data-v="bottom-right" data-t="corner_br"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2 data-t="sec_questions"></h2>
+    <div class="row col">
+      <span class="lbl" data-t="selection"></span>
+      <div class="seg" data-k="mode">
+        <button data-v="smart" data-t="mode_smart"></button>
+        <button data-v="random" data-t="mode_random"></button>
+      </div>
+    </div>
+    <div class="row col">
+      <span class="lbl" data-t="direction"></span>
+      <div class="seg three" data-k="direction">
+        <button data-v="front" data-t="dir_front"></button>
+        <button data-v="back" data-t="dir_back"></button>
+        <button data-v="mixed" data-t="dir_mixed"></button>
+      </div>
+    </div>
+    <label class="row">
+      <span class="lbl"><span data-t="retire"></span><small data-t="retire_help"></small></span>
+      <input type="checkbox" class="switch" data-k="retire">
+    </label>
+    <div class="row" id="retire-row">
+      <span class="lbl" data-t="retire_times"></span>
+      <span class="range"><input type="number" min="1" max="20" data-k="retire_after"> <span data-t="times"></span></span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2 data-t="sec_sounds"></h2>
+    <label class="row">
+      <span class="lbl"><span data-t="sound_answer"></span><small data-t="sound_answer_help"></small></span>
+      <span class="inline">
+        <button class="ghost sm" data-test="ok" data-t="play_ok"></button>
+        <button class="ghost sm" data-test="bad" data-t="play_bad"></button>
+        <input type="checkbox" class="switch" data-k="sound_answer">
+      </span>
+    </label>
+    <label class="row">
+      <span class="lbl"><span data-t="sound_open"></span><small data-t="sound_open_help"></small></span>
+      <span class="inline">
+        <button class="ghost sm" data-test="open" data-t="play"></button>
+        <input type="checkbox" class="switch" data-k="sound_open">
+      </span>
+    </label>
+  </section>
+
+  <section class="card">
+    <h2 data-t="sec_language"></h2>
+    <div class="row">
+      <span class="lbl"><span data-t="language"></span><small data-t="language_help"></small></span>
+      <select id="language" data-k="language"></select>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="h2row">
+      <h2 data-t="sec_decks"></h2>
+      <button id="import" class="primary" data-t="add_file"></button>
+    </div>
+    <p class="hint" data-t="decks_help"></p>
+    <ul id="decks"></ul>
+    <details class="formats">
+      <summary data-t="formats_q"></summary>
+      <p id="fmt"></p>
+      <pre>001. no way — not at all (informal)
+der Hund = the dog
+capital of France: Paris
+猫	cat</pre>
+      <p data-t="formats_csv"></p>
+      <p data-t="formats_meta"></p>
+      <pre>#! name: German basics
+#! front: Deutsch
+#! back: English</pre>
+    </details>
+  </section>
+
+  <section class="card danger">
+    <div class="h2row">
+      <div><h2 data-t="sec_reset"></h2><p class="hint" data-t="reset_help"></p></div>
+      <button id="reset" class="ghost" data-t="reset"></button>
+    </div>
+  </section>
+</div>
+
+<div id="toast"></div>
+<div id="modal" hidden>
+  <div class="box">
+    <p id="modal-text"></p>
+    <div class="actions">
+      <button class="ghost" id="modal-no" data-t="cancel"></button>
+      <button class="primary bad" id="modal-yes" data-t="yes"></button>
+    </div>
+  </div>
+</div>
+
+<script src="i18n.js"></script>
+<script src="sounds.js"></script>
+<script src="settings.js"></script>
+</body>
+</html>
